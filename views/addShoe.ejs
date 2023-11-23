@@ -1,0 +1,43 @@
+<%- include('headerAdmin.ejs') %>
+<body>
+    <div class="container">
+        <h1>
+            <b>Add Available Shoe</b>
+        </h1>
+    </div>
+    <% if(errors){ %>
+        <% errors.forEach(error => { %>
+            <div class="alert alert-danger container" role="alert">
+                <%= error %>
+            </div>
+       <% })  %>
+    <% } %>
+
+    <div class="container">
+        <form action="/admin/shoes/add" method="post">
+            <div class="mb-3">
+              <label for="exampleInputTitle" class="form-label">Brand</label>
+              <input type="text" class="form-control" id="exampleInputTitle" name="brand">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputTotalStock" class="form-label">Total Stock</label>
+              <input type="number" class="form-control" id="exampleInputTotalStock" name="stock">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPrice" class="form-label">Price</label>
+              <input type="number" class="form-control" id="exampleInputPrice" name="price">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputBookPicture" class="form-label">Shoes Picture</label>
+              <input type="url" class="form-control" id="exampleInputBookPicture" name="image">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputStatus" class="form-label">Status</label>
+              <select class="form-select" aria-label="Default select example" name="status">
+                <option selected value="Available">Available</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>

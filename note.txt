@@ -1,0 +1,12 @@
+npx sequelize model:create --name User --attributes name:string,email:string,password:string,role:string
+npx sequelize model:create --name Profile --attributes fullName:string,address:string,gender:string,
+npx sequelize model:create --name Categorie --attributes categoriesName:string
+npx sequelize model:create --name Shoe --attributes brand:string,stock:integer,price:integer,image:string,status:string
+npx sequelize model:create --name Shoeshascategorie --attributes ShoesId:integer,CategoriesId:integer
+npx sequelize migration:create --name UserId
+npx sequelize seed:create --name Shoe-user.js
+npx sequelize seed:create --name Categorie-user
+
+
+
+

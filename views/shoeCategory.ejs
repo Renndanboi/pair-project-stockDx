@@ -1,0 +1,28 @@
+<%- include('headerAdmin.ejs') %>
+<body>
+    <div class="container" style="margin-bottom: 35px;">
+        <h1>
+            Add New Category
+        </h1>
+    </div>
+    <form action="/admin/categories/add" method="post" class="container">
+        <div style="margin-bottom: 20px;">
+            <label for="" class="form-label">Add Categories</label>
+            <select class="form-select" name="CategoriesId">
+                <% dataCategories.forEach(el =>{ %>
+                    <option value="<%= el.id  %>"><%= el.categoriesName %></option>
+              <%  }) %>
+              </select>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <label for="" class="form-label">Shoe list</label>
+            <select class="form-select" name="ShoesId">
+                <% dataBook.forEach(el => { %>
+                    <option value="<%= el.id  %>"><%= el.title  %></option>
+                <%}) %>
+              </select>
+        </div>
+
+        <button type="submit" class="btn btn-warning">Submit</button>
+    </form>
+</body>

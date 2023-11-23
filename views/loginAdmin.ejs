@@ -1,0 +1,21 @@
+<%- include('header.ejs') %>
+<body >
+    <form action="/login/admin" method="post">
+        <div class="container" style="width: 30%; background-color: grey; padding: 50px; border-radius: 20px; backdrop-filter: blur(45px);">
+            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 25px; color: white;">
+                <h1><b>Login Admin</b></h1>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
+                <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <div style="margin-top: 50px; justify-items: center; justify-content: center; align-items: center; display: flex;">
+                <button type="submit" class="btn btn-warning" style="color: white;">Sign Up</button>
+            </div>
+        </div>
+    </form>
+</body>

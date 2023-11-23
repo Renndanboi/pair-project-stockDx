@@ -1,0 +1,54 @@
+<%- include('headerUser.ejs') %>
+<body style="background-color: #EEE9E3;">
+    <div class="container">
+        <div>
+            <h1>
+                <b>
+                    Shoe List
+                </b>
+            </h1>
+    
+            <% if (buyMsg){ %>
+                <div class="alert alert-success" role="alert">
+                    <%= buyMsg  %>
+                </div>
+            <% } %>
+        </div>
+        <div>
+            <a href="/shoes/soldlist" class="btn btn-danger" type="button" style="margin-bottom: 20px;">Sold Shoe List</a>
+            <div class="btn-group" role="group" aria-label="Basic outlined example" style="margin-bottom: 20px;">
+                <a href="/shoes?orderBy=stock" type="button" class="btn btn-outline-warning">Filter Total Stock</a>
+                <a href="/shoes?orderBy=price" type="button" class="btn btn-outline-warning">Filter Price Shoe</a>
+              </div>
+        </div>
+        <div margin-top: 20px;">
+            <table class="table table-bordered table-warning" style="border-color: #EEE9E3;">
+                <thead>
+                  <tr>
+                    <th scope="col">Brand Shoe</th>
+                    <th scope="col">Total Stock</th>
+                    <th scope="col">Price Shoe</th>
+                    <th scope="col">Shoe Picture</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <% data.forEach(el =>{ %>
+                  <tr>
+                    <th scope="row"><%= el.title  %></th>
+                    <td><%= el.stock  %></td>
+                    <td><%= el.formatRupiah  %></td>
+                    <td><img src="<%= el.image  %>" alt="" style="width: 70px; height: 70px;"></td>
+                    <td><%= el.status  %></td>
+                    <td>
+                        <a href="/shoes/buy/<%= el.id  %>" type="button" class="btn btn-outline-secondary">Buy</a>
+                        <a href="" type="button" class="btn btn-outline-warning" hidden>Detail</a>
+                    </td>
+                  </tr>
+                <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>

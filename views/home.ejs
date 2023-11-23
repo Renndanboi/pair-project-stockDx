@@ -1,0 +1,137 @@
+<%- include('header.ejs') %>
+<head>
+  <style>
+      /* Reset some default styles for better consistency */
+      body,
+      h1,
+      h2,
+      h3,
+      p,
+      ul,
+      li {
+          margin: 0;
+          padding: 0;
+      }
+
+      body {
+          font-family: 'Arial', sans-serif; /* You can change the font-family as needed */
+          background-color: #EEE9E3;
+      }
+
+      .container {
+          max-width: 800px; /* Adjust the max-width based on your design */
+          margin: 0 auto; /* Center the container */
+          padding: 20px;
+      }
+
+      .carousel {
+          position: relative;
+          margin-top: 20px; /* Add margin to separate from the container */
+      }
+
+      .carousel-indicators {
+          position: absolute;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+      }
+
+      .carousel-indicators button {
+          background-color: #007BFF; /* Change the color as needed */
+          border: none;
+          width: 10px;
+          height: 10px;
+          margin: 0 5px;
+          border-radius: 50%;
+          cursor: pointer;
+      }
+
+      .carousel-indicators button.active {
+          background-color: #0056b3; /* Change the color for the active indicator */
+      }
+
+      .carousel-inner {
+          position: relative;
+      }
+
+      .carousel-item {
+          display: none;
+      }
+
+      .carousel-item.active {
+          display: block;
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 30px;
+          height: 30px;
+          border: none;
+          background-color: #007BFF; /* Change the color as needed */
+          border-radius: 50%;
+          cursor: pointer;
+          color: #fff; /* Change the color of the control icons */
+      }
+
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+          font-size: 1.5rem; /* Adjust the font size as needed */
+          line-height: 1.7;
+      }
+
+      .carousel-control-prev {
+          left: 10px;
+      }
+
+      .carousel-control-next {
+          right: 10px;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 600px) {
+          .container {
+              max-width: 100%; /* Adjust to full width on small screens */
+              padding: 10px;
+          }
+      }
+
+      @media (max-width: 768px) {
+          .carousel-control-prev,
+          .carousel-control-next {
+              width: 20px;
+              height: 20px;
+              font-size: 1rem;
+          }
+      }
+  </style>
+</head>
+<body style="background-color: rgb(13, 12, 11);">
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/public/c2.jpeg" class="d-block w-100" alt="book1">
+          </div>
+          <div class="carousel-item active">
+            <img src="/public/c3.jpeg" class="d-block w-100" alt="book2">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </body>
+  </html>

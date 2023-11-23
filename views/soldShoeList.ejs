@@ -1,0 +1,39 @@
+<%- include('headerUser.ejs') %>
+<body style="background-color: #EEE9E3;">
+    <div class="container">
+        <div>
+            <h1>
+                <b>
+                    Sold Shoe List
+                </b>
+            </h1>
+        </div>
+        <div>
+            <a href="/shoes" class="btn btn-warning" type="button" style="margin-bottom: 20px;">Shoe Page</a>
+        </div>
+        <div margin-top: 20px;>
+            <table class="table table-bordered table-warning" style="border-color: #EEE9E3;">
+                <thead>
+                  <tr>
+                    <th scope="col">Brand Shoe</th>
+                    <th scope="col">Total Stock</th>
+                    <th scope="col">Price Shoe</th>
+                    <th scope="col">Shoe Picture</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <% data.forEach(el =>{ %>
+                  <tr>
+                    <th scope="row"><%= el.title  %></th>
+                    <td><%= el.stock  %></td>
+                    <td><%= el.formatRupiah  %></td>
+                    <td><img src="<%= el.image  %>" alt="" style="width: 70px; height: 70px;"></td>
+                    <td><%= el.status = "Not Available" %></td>
+                  </tr>
+                <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>

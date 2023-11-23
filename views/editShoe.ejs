@@ -1,0 +1,45 @@
+<%- include('headerAdmin.ejs') %>
+<body>
+    <div class="container" style="margin-bottom: 20px;">
+        <h1>
+            <b>Edit Shoe Page</b>
+        </h1>
+    </div>
+    <% if(errors){ %>
+      <% errors.forEach(error => { %>
+          <div class="alert alert-danger container" role="alert">
+              <%= error %>
+          </div>
+     <% })  %>
+  <% } %>
+    <div class="container">
+        <form action="/admin/shoes/edit/<%= selectedShoe.id  %>" method="post">
+            <div class="mb-3">
+              <label for="exampleInputTitle" class="form-label">Brand</label>
+              <input type="text" class="form-control" id="exampleInputTitle" name="title" value="<%= selectedShoe.brand %>">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputTotalStock" class="form-label">Stock</label>
+              <input type="number" class="form-control" id="exampleInputTotalStock" name="stock" value="<%= selectedShoe.stock %>">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPrice" class="form-label">Price</label>
+              <input type="number" class="form-control" id="exampleInputPrice" name="price" value="<%= selectedShoe.price %>">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputImage" class="form-label">Image</label>
+              <input type="url" class="form-control" id="exampleInputImage" name="image" value="<%= selectedShoe.image %>">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputStatus" class="form-label">Status</label>
+              <select class="form-select" aria-label="Default select example" name="status">
+                <option <%= selectedShoe.status === 'Available' ? "selected" : "" %> value="Available">Available</option>
+                <label for="">Available</label>
+                <option <%= selectedShoe.status === 'Not Available' ? "selected" : "" %> value="Not Available"> Not Available</option>
+                <label for="">Not Available</label>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>

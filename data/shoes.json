@@ -1,0 +1,44 @@
+[
+    {
+        "brand": "Nike Jordan 1 Retro High OG",
+        "stock": "10",
+        "price" : 10000,
+        "image": "https://sneakersquad.imgix.net/uploads/primary/blog/Air-Jordan-1-Retro-High-OG-University-Blue-foto-2.jpeg?auto=compress%2Cformat&dpr=5&fit=crop&h=683&ixlib=php-3.3.0&q=20&w=1076",
+        "status": "Available"
+        },
+        {
+        "brand": "Crocs All-Terrain Clog",
+        "stock": "30",
+        "price" : 70000,
+        "image": "https://images.internetstores.de/products/1388112/02/d1b039/Crocs_Classic_All_Terrain_Clogs_Herren_oliv[1920x1920].jpg?forceSize=false&forceAspectRatio=true&useTrim=true",
+        "status": "Available"
+        },
+        {
+        "brand": "Dr. Martens 1461 3-Eye",
+        "stock": "10",
+        "price" : 50000,
+        "image": "https://d2ob0iztsaxy5v.cloudfront.net/product/313210/3132107020_zm.jpg",
+        "status": "Available"
+        },
+        {
+        "brand": "Nike Cortez",
+        "stock": "10",
+        "price" : 60000,
+        "image": "hhttps://upload.wikimedia.org/wikipedia/commons/f/f7/Nike_cortez_(1).gif",
+        "status": "Available"
+        },
+        {
+        "brand": "UGG Classic Ultra Mini Boot",
+        "stock": "10",
+        "price" : 80000,
+        "image": "https://i.pinimg.com/originals/c4/ee/6d/c4ee6d796fe8c46dbbda0b9b978a49b6.jpg",
+        "status": "Available"
+        },
+        {
+        "brand": "adidas Yeezy Boost 350 V2",
+        "stock": "10",
+        "price" : 90000,
+        "image": "https://sneakernews.com/wp-content/uploads/2019/04/adidas-yeezy-boost-350-v2-black-fu9013-release-date-8.jpg",
+        "status": "Available"
+        }
+]

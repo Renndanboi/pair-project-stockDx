@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "stockDx",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
